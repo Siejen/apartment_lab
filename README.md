@@ -76,24 +76,7 @@ You can do the same thing to play with `app.Property`, `app.Manager`, `app.Tenan
 
 * Next start implementing inheritance for a `manager`
 
-
-You could do the following:
-
-```
-var person = require("./person");
-
-function Manager(name, contact) {
-  this.name = name;
-  this.contact = contact;
-  this.properties = [];
-}
-
-// Inheriting
-Manager.prototype = new Person();
-Manager.prototype.constructor = Manager;
-
-```
-But the following makes use of a cool `call` method you can use with functions that avoids a bunch extra work.
+Example of how to inherit:
 
 ```
 var person = require("./person");
